@@ -1,0 +1,259 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#chatbox-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 500px; /* Fix height of the chatbox */
+    display: flex;
+    flex-direction: column;
+}
+
+#category-tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab-btn:hover {
+    text-decoration: underline;
+}
+
+#general-chat {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensure the chat section expands to fill the remaining space */
+    padding: 10px;
+    padding-top: 20px;
+    overflow: hidden; /* Prevent chatbox from growing */
+}
+
+#messages-container {
+    flex-grow: 1;
+    overflow-y: auto; /* Enable scrolling */
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    scroll-behavior: smooth;
+}
+
+#message-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#user-message {
+    width: 80%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#options-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.option-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 75px;
+    text-align: center;
+}
+
+.option-btn:hover {
+    background-color: #45a049;
+}
+
+/* Scrollable messages */
+#messages-container {
+    scroll-behavior: smooth;
+}
+
+.message {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.message .msg-bubble {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    max-width: 80%;
+}
+
+.user-msg {
+    background-color: #007BFF;
+    color: white;
+    text-align: right;
+    margin-left: auto;
+}
+
+.bot-msg {
+    background-color: #e0e0e0;
+    color: black;
+    text-align: left;
+    margin-right: auto;
+}
+
+/* File preview styling */
+.file-preview {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.file-preview img {
+    margin-top: 10px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Username and Clear chat button */
+#clear-chat {
+    margin-top: 10px;
+    text-align: center;
+    bottom: 0%;
+}
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#video-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh; /* Limit height of video container */
+    margin-bottom: 50px;
+}
+
+.video-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+}
+
+.video-card video {
+    width: 100%;
+    height: auto;
+}
+
+.video-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.video-info h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.video-info small {
+    color: #888;
+    font-size: 12px;
+}
+
+#video-input-file {
+    margin-bottom: 20px;
+}
+
+#upload-video-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#upload-video-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Back to Chat Button */
+#back-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+#back-button a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+}
