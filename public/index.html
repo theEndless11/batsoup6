@@ -31,32 +31,17 @@
                 </button>
                 <input type="file" id="file-input" style="display:none" />
             </div>
-            <script>
-                // Handle file input via buttons
-              document.getElementById('send-file-btn').addEventListener('click', () => {
-                document.getElementById('file-input').click(); // Trigger file input
-              });
-              
-              // Handle the file selection (for image/video/file)
-              document.getElementById('file-input').addEventListener('change', (event) => {
-                const file = event.target.files[0]; // Get the selected file
-                if (file) {
-                    console.log('File selected:', file.name);
-                    // You can handle the file here, e.g., upload to server
-                }
-              });
-              
-              </script>
+            <div id="file-preview"></div> <!-- File preview container -->
+        </div>
 
-            <!-- Username Input (applies to both sections) -->
-            <div id="username-container">
-                <input type="text" id="username-input" placeholder="Enter username" />
-            </div>
+        <!-- Username Input (applies to both sections) -->
+        <div id="username-container">
+            <input type="text" id="username-input" placeholder="Enter username" />
+        </div>
 
-            <!-- Clear Chat Button -->
-            <div id="clear-chat">
-                <button id="clear-chat-btn">Clear Chat</button>
-            </div>
+        <!-- Clear Chat Button -->
+        <div id="clear-chat">
+            <button id="clear-chat-btn">Clear Chat</button>
         </div>
     </div>
 
@@ -208,5 +193,7 @@
             // Initial fetch of messages
             fetchMessages();
         });
-        </script>
+    </script>
+</body>
+
         
