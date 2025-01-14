@@ -56,24 +56,7 @@
             document.getElementById('send-file-btn').addEventListener('click', () => {
                 document.getElementById('file-input').click();
             });
-            // Handle file upload
-if (fileInput && fileInput.files.length > 0) {
-  const formData = new FormData();
-  formData.append('file', fileInput.files[0]);
-
-  try {
-    const uploadResponse = await fetch('/api/upload', { method: 'POST', body: formData });
-    const { mediaUrl: uploadedMediaUrl } = await uploadResponse.json();
-    console.log('Uploaded Media URL:', uploadedMediaUrl);
-    mediaUrl = uploadedMediaUrl;
-  } catch (error) {
-    console.error('Error uploading file:', error);
-    alert('Failed to upload file.');
-    return;
-  }
-}
-
-        
+          
             // Function to display a message
             function displayMessage({ username, message, mediaUrl, timestamp }) {
                 const messageElement = document.createElement('div');
